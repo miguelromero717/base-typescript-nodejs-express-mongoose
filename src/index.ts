@@ -2,6 +2,12 @@ import * as http from 'http';
 import * as debug from 'debug';
 import { App } from './app';
 
+/** 
+ * Script de Inicio de la Aplicación
+ * 
+ * @author miguelromero717
+ */ 
+
 var app : App = new App();
 
 debug('ts-express:server');
