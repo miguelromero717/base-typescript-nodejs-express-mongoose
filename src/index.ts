@@ -1,6 +1,7 @@
 import * as http from 'http';
 import * as debug from 'debug';
 import { App } from './app';
+import Constantes = require("./config/Constantes");
 
 /** 
  * Script de Inicio de la Aplicación
@@ -12,7 +13,7 @@ var app : App = new App();
 
 debug('ts-express:server');
 
-const port = normalizePort(process.env.PORT || 3030);
+const port = normalizePort(process.env.PORT || Constantes.Constants.PORT_SERVER);
 app.express.set('port', port);
 
 const server = http.createServer(app.express);

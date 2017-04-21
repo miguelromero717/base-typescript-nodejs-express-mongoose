@@ -5,6 +5,8 @@
  */
 export class Constants {
 
+    // Puerto Servidor
+    static PORT_SERVER: number = 3030;
     // Nombre de la Base de datos
     static DB: string = "test";
     // Nombre de Usuario de la base de Datos
