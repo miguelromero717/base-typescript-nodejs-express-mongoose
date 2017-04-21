@@ -2,6 +2,7 @@ import * as express from 'express';
 import { DBConfig } from '../config/DBConfig';
 
 import { TestRouter } from './TestRouter';
+import { UsuariosRouter } from './usuarios/UsuariosRouter';
 
 /** 
  * Clase de Configuración del Router de la API
@@ -13,6 +14,7 @@ export class ApiRouter {
     public express: express.Application;
 
     private testRouter: TestRouter = new TestRouter();
+    private usuariosRouter: UsuariosRouter = new UsuariosRouter();
 
     constructor(express: express.Application) {
         this.express = express;
@@ -28,6 +30,9 @@ export class ApiRouter {
 
         // Test
         this.express.use('/test', this.testRouter.router);
+
+        // Usuarios
+        this.express.use('/api/usuarios', this.usuariosRouter.router);
     }
 
     /**
