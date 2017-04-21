@@ -1,6 +1,8 @@
 import * as express from 'express';
 import { DBConfig } from '../config/DBConfig';
 
+import { TestRouter } from './TestRouter';
+
 /** 
  * Clase de Configuración del Router de la API
  * 
@@ -9,6 +11,8 @@ import { DBConfig } from '../config/DBConfig';
 export class ApiRouter {
 
     public express: express.Application;
+
+    private testRouter: TestRouter = new TestRouter();
 
     constructor(express: express.Application) {
         this.express = express;
@@ -21,6 +25,9 @@ export class ApiRouter {
      */
     public configRoutes() {
         this.configHeadersCORS();
+
+        // Test
+        this.express.use('/test', this.testRouter.router);
     }
 
     /**

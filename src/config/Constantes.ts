@@ -6,9 +6,9 @@
 export class Constants {
 
     // Nombre de la Base de datos
-    static DB: string = "db";
+    static DB: string = "test";
     // Nombre de Usuario de la base de Datos
-    static USER_DB: string = "user";
+    static USER_DB: string = "test";
     // Password del Usuario de base de Datos
     static PASSWOR_DB: string = "P4ssw0rd*";
     // Host Base de Datos
